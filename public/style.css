@@ -1,0 +1,120 @@
+a{
+    color: #5d5d5d;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ABDB25;
+
+}
+
+.mygas {
+    background-color: #999999;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.mygas:hover{
+    background-color: #ABDB25;
+    color: #5d5d5d;
+    text-decoration: none;
+}
+
+.skalas {
+    transform: scale(1);
+}
+
+.skalas:hover {
+    transform: scale(1.1);
+}
+
+.svgas {
+    width: 70px;
+    height: 70px;
+}
+.svgas:hover {
+    fill: red;
+}
+
+.main_color {
+    background-color: #999999;
+    color: #ABDB25;
+}
+
+.greenas {
+    color: #ABDB25;
+}
+
+.greenbo {
+    border: 2px solid #ABDB25;
+}
+
+.lightas {
+    background-color: #CCCCCC;
+}
+
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #ABDB25 !important;
+}
+
+.hover_title {
+    display: none;
+    position: absolute;
+    text-align: center;
+    padding-bottom: 10px;
+    height: 100%;
+}
+
+ion-icon {
+    color: #ABDB25;
+}
+
+.img_hov {
+    position: absolute;
+}
+
+.img_hov:hover + .hover_title{
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+
+.colorpicker {
+    list-style-type:none;
+}
+
+#text {
+    display: none;
+}
+
+.colorpicker li {
+    float: left;
+    list-style-type:none;
+    text-align: center;
+}
+
+.colorpicker li img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+}
+
+.colorpicker li {
+    float: left;
+    padding: 0;
+}
+

@@ -131,6 +131,31 @@ ul {
     padding-right: 10px;
 }
 
+.category-name {
+    text-align: left;
+}
+
+/*.category-card-inside {*/
+/*    position: absolute;*/
+/*    top: -100px;*/
+/*}*/
+
+.category-card {
+    padding: 20px;
+    margin: 10px 10px;
+    height: 250px;
+    /*position: relative;*/
+}
+
+.category-card:hover {
+    border: 2px solid #ABDB25;
+}
+
+.button-action {
+    background-color: #ABDB25;
+}
+
+
 
 
 

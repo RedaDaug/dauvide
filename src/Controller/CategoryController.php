@@ -38,8 +38,8 @@ class CategoryController extends AbstractController
     public function create(Request $request){
         $category = new Category();
 
-        $category->setName("MFILTER filtrai")
-            ->setImageName('mfilter.png');
+        $category->setName("VISBELLA")
+            ->setImageName('visbella.png');
         $em = $this->getDoctrine()->getManager();
         $em->persist($category);
         $em->flush();

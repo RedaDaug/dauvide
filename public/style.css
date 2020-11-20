@@ -118,3 +118,25 @@ ul {
     padding: 0;
 }
 
+.history {
+    filter: invert(72%) sepia(0%) saturate(0%) hue-rotate(157deg) brightness(86%) contrast(85%);
+}
+
+.hero {
+    min-height: 400px;
+    max-width: 1200px;
+    background-image: url('img/blue-auto.png');
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 250px;
+}
+
+.hero button {
+    padding-right: 10px;
+}
+
+
+
+
+

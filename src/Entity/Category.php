@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\CategoriesRepository;
+use App\Repository\CategoryRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=CategoriesRepository::class)
+ * @ORM\Entity(repositoryClass=CategoryRepository::class)
  */
-class Categories
+class Category
 {
     /**
      * @ORM\Id
@@ -25,7 +25,7 @@ class Categories
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $image;
+    private $image_name;
 
     public function getId(): ?int
     {
@@ -44,14 +44,14 @@ class Categories
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getImageName(): ?string
     {
-        return $this->image;
+        return $this->image_name;
     }
 
-    public function setImage(?string $image): self
+    public function setImageName(?string $image_name): self
     {
-        $this->image = $image;
+        $this->image_name = $image_name;
 
         return $this;
     }

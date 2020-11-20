@@ -6,7 +6,7 @@
     <section class="mt-5">
         <div class="container text-center">
             <div class="hero">
-                <div >
+                <div>
                     <button class="btn-primary rounded">Pirk</button>
                 </div>
             </div>
@@ -38,37 +38,40 @@
 
             </div>
         </div>
-            <div class="container text-center">
-                <h2>Apie mus</h2>
-                <div class="row my-5">
-                    <div class="col-lg-3 col-md-6">
-                        <img src="{{ asset('img/start.svg') }}" alt="Pradzia" class="w-25 pb-2 history">
-                        <p>UAB „Dauvidės prekyba“ įkurta 1998 metų gruodžio 10 dieną.
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 ">
-                        <img src="{{ asset('img/mission.svg') }}" alt="Veikla" class="w-25 pb-2 history">
-                        <p>Pagrindinė įmonės veikla – didmeninė prekyba
-                            automobilių eksploatacinėmis medžiagomis.
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 ">
-                        <img src="{{ asset('img/product.svg') }}" alt="Veikla" class="w-25 pb-2 history">
-                        <p>Nuo veiklos pradžios didelis dėmesys skiriamas gaminamos ir
-                            parduodamos produkcijos kokybei.
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 ">
-                        <img src="{{ asset('img/truck.svg') }}" alt="Veikla" class="w-25 pb-2 history">
-                        <p>Pristatymo terminai optimalūs.</p>
-                    </div>
-
+    </section>
+    <section>
+        {{ render(controller(
+            'App\\Controller\\CategoryController::index')) }}
+    </section>
+    <section>
+        <div class="container text-center">
+            <h2>Apie mus</h2>
+            <div class="row my-5">
+                <div class="col-lg-3 col-md-6">
+                    <img src="{{ asset('img/start.svg') }}" alt="Pradzia" class="w-25 pb-2 history">
+                    <p>UAB „Dauvidės prekyba“ įkurta 1998 metų gruodžio 10 dieną.
+                    </p>
                 </div>
+                <div class="col-lg-3 col-md-6 ">
+                    <img src="{{ asset('img/mission.svg') }}" alt="Veikla" class="w-25 pb-2 history">
+                    <p>Pagrindinė įmonės veikla – didmeninė prekyba
+                        automobilių eksploatacinėmis medžiagomis.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 ">
+                    <img src="{{ asset('img/product.svg') }}" alt="Veikla" class="w-25 pb-2 history">
+                    <p>Nuo veiklos pradžios didelis dėmesys skiriamas gaminamos ir
+                        parduodamos produkcijos kokybei.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 ">
+                    <img src="{{ asset('img/truck.svg') }}" alt="Veikla" class="w-25 pb-2 history">
+                    <p>Pristatymo terminai optimalūs.</p>
+                </div>
+
             </div>
-
-
-
         </div>
+
     </section>
 
 {% endblock %}

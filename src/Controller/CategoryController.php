@@ -2,19 +2,63 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
+use App\Repository\CategoryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
+/**
+ * @Route("/category", name="category.")
+ */
 
 class CategoryController extends AbstractController
 {
     /**
-     * @Route("/category", name="category")
+     * @Route("/", name="index")
+     * @param CategoryRepository $categoryRepository
+     * @return Response
      */
-    public function index(): Response
+    public function index(CategoryRepository $categoryRepository)
+
     {
+        $categories = $categoryRepository->findAll();
         return $this->render('category/index.html.twig', [
-            'controller_name' => 'CategoryController',
+            'categories' => $categories
         ]);
     }
+
+    /**
+     * @Route("/create", name="create")
+     * @param Request $request
+     * @return Response
+     */
+
+    public function create(Request $request){
+        $category = new Category();
+
+        $category->setName("MFILTER filtrai")
+            ->setImageName('mfilter.png');
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($category);
+        $em->flush();
+        return new Response("lalala");
+
+    }
+
+    /**
+     * @Route("/show/{id}", name="show")
+     * @param $id
+     * @return Response
+     */
+
+    public function show($id) {
+
+        return $this->render('category/show.html.twig', [
+            'sup_products' => $sup_products
+        ]);
+    }
+
+
 }

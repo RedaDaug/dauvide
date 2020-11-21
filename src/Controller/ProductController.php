@@ -115,7 +115,7 @@ class ProductController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $file = $form->get('image')->getData();
+            $file = $form->get('image_name')->getData();
             if ($file) {
                 /** @var UploadedFile $filename */
                 $filename = md5(uniqid()) . '.' . $file->guessClientExtension();

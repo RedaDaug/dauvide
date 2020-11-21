@@ -4,6 +4,8 @@ namespace App\Form;
 
 use App\Entity\Product;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,9 +16,16 @@ class ProductType extends AbstractType
         $builder
             ->add('name')
             ->add('description')
-            ->add('image_name')
+            ->add('image_name', FileType::class, [
+              'mapped' => false
+              ])
             ->add('barcode')
             ->add('category')
+            ->add('save', SubmitType::class, [
+                'attr' => [
+                    'class' => 'btn btn-success float-right'
+                ]
+            ])
         ;
     }
 

@@ -3,26 +3,50 @@
 {% block title %}Hello AdminController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
 
-<div class="example-wrapper">
-    <table class="table">
-        <tr>
-            <th></th>
-            <th>Produkto pavadinimas</th>
-            <th></th>
-        </tr>
-        {% for product in products %}
-            <tr>
-                <td><img src="{{ asset('img/' ~ product.imageName) }}" id="currentImg" alt="Teacup" title="Blue Teacup" width="40px"></td>
-                <td>{{ product.name }}</td>
-{#                <td><a href="{{ path('product.edit', {id: product.id}) }}">Edit</a>  | <a onclick="return confirm('Ar tikrai norite istrinti?')" href="{{ path('product.delete', {id: product.id}) }}">Delete</a>#}
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
-</div>
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <section id="products mt-5 ">
+        <h2 class="container mt-5 pt-5">Administracijos puslapis</h2>
+        <div class="container pt-5  pb-5">
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            <table class="table">
+                <tr>
+                    <th></th>
+                    <th>Produkto pavadinimas</th>
+                    <th></th>
+                </tr>
+                {% for product in products %}
+                    <tr>
+                        <td><img src="{{ asset('img/' ~ product.imageName) }}" id="currentImg" alt="Teacup"
+                                 title="Blue Teacup" width="40px"></td>
+                        <td>{{ product.name }}</td>
+                        <td><a href="{{ path('product.edit', {id: product.id}) }}">Edit</a> | <a
+                                    onclick="return confirm('Ar tikrai norite istrinti?')"
+                                    href="{{ path('product.delete', {id: product.id}) }}">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <div class="mb-5">
+                <ion-icon name="add-circle"></ion-icon>
+                <a href="{{ path('product.create') }}">Sukurti naują produktą</a>
+            </div>
+        </div>
+    </section>
 {% endblock %}

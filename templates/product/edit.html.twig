@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="mt-5">
+        <div class="container pt-5 col-lg-6">
+            <h3>Update the product</h3>
+            <div>
+                <img src="{{ asset('img/' ~ product.imageName) }}" id="currentImg" alt="Teacup" title="Blue Teacup" width="100px">
+            </div>
+            <div>
+                {{ form(form) }}
+                <button class="btn"> Cancel </button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+{% endblock %}

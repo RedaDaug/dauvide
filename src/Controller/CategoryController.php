@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use App\Repository\CategoryRepository;
+use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -50,13 +51,15 @@ class CategoryController extends AbstractController
     /**
      * @Route("/show/{id}", name="show")
      * @param $id
+     * @param ProductRepository $productRepository
      * @return Response
      */
 
-    public function show($id) {
+    public function show($id, ProductRepository $productRepository) {
+        $products = $productRepository->findBy(['category' => "$id"]);
 
         return $this->render('category/show.html.twig', [
-            'sup_products' => $sup_products
+            'products' => $products
         ]);
     }
 

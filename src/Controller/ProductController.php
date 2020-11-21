@@ -79,4 +79,67 @@ class ProductController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/delete/{id}", name="delete")
+     * @param $id
+     * @param ProductRepository $productRepository
+     * @return Response
+     */
+
+    public function delete($id, ProductRepository $productRepository){
+        $product = $productRepository->find($id);
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($product);
+        $em->flush();
+
+        $this->addFlash('success', "The product was deleted");
+        return $this->redirect($this->generateUrl('admin.index'));
+
+    }
+
+    /**
+     * @Route("/edit/{id}", name="edit")
+     * @param Request $request
+     * @param $id
+     * @param ProductRepository $productRepository
+     * @return Response
+     */
+
+    public function edit(Request $request, $id, ProductRepository $productRepository){
+
+        $product = $productRepository->find($id);
+
+        $form = $this->createForm(ProductType::class, $product);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $file = $form->get('image')->getData();
+            if ($file) {
+                /** @var UploadedFile $filename */
+                $filename = md5(uniqid()) . '.' . $file->guessClientExtension();
+
+                $file->move(
+                    $this->getParameter('uploads_dir'),
+                    $filename
+                );
+
+                $product->setImageName($filename);
+
+            }
+            $em->flush();
+            $this->addFlash('success', "The product was updated");
+
+            return $this->redirect($this->generateUrl('admin.index'));
+        }
+
+
+        return $this->render('product/edit.html.twig', [
+            'form' => $form->createView(),
+            'product' => $product
+        ]);
+
+    }
+
 }

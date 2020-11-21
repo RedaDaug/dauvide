@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="produktai-kategorijoje">
+        <div class="container mt-5 pt-5">
+            <h3>Produktai kategorijoje: {% for product in products|slice (0,1) %}{{ product.category }}{% endfor %} </h3>
+            <p> </p>
+
+
+            <div class="row mt-3 mb-5">
+                {% for product in products %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-2 mb-2">
+                        <div role="button" class="btn mb-3 skalas">
+{#                            <a class="btn mt-5 mb-3" href="{{ path('product.show', {id: product.id}) }}" role="button">#}
+{#                                <img src="{{ asset('img/' ~ product.image) }}" alt="what" width="100%">#}
+                                <div>{{ product.name }}</div>
+{#                            </a>#}
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+{% endblock %}

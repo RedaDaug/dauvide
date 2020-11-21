@@ -44,6 +44,34 @@
         {{ render(controller(
             'App\\Controller\\CategoryController::index')) }}
     </section>
+    <section id="partneriu-produkcija" class="bg-light" >
+        <div class="container mt-5 pt-5 text-center">
+            <h3 class="text-dark">Partneriu produktai</h3>
+            <p>Su mūsų partnerių produkcija galite susipažinti apsilankę jų internetinėse sveteinėse</p>
+            <div class="row mt-5 mb-5">
+                    <div class="col-lg-6 col-sm-6 col-6 mt-2 mb-2">
+                        <a href="http://visbellabaltics.eu/produktai/" role="button" class="skalas" >
+                            <div class="bg-white category-card">
+                                <div class="category-card-inside">
+                                    <img src=" {{ asset('img/visbella.jpg') }}" alt="purskiklis" width="40%" >
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                <div class="col-lg-6  col-sm-6 col-6 mt-2 mb-2">
+                        <a href="http://mfilter.lt/automobiliu-filtrai/" role="button" class="skalas" >
+                            <div class="bg-white category-card">
+                                <div class="category-card-inside">
+                                    <img src=" {{ asset('img/mfilter.png') }}" alt="purskiklis" width="40%" >
+                                    <p>Jau daugelį metų prekiaujame lietuviškais automobilių filtrais MFilter. </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+            </div>
+        </div>
+    </section>
     <section>
         <div class="container text-center">
             <h2>Apie mus</h2>

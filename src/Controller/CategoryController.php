@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use App\Repository\CategoryRepository;
+use App\Repository\GroupRepository;
 use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -55,11 +56,26 @@ class CategoryController extends AbstractController
      * @return Response
      */
 
-    public function show($id, ProductRepository $productRepository) {
-        $products = $productRepository->findBy(['category' => "$id"]);
+    public function findAllProductsInCategory($id, ProductRepository $productRepository) {
+    $products = $productRepository->findBy(['category' => "$id"]);
+
+    return $this->render('category/show.html.twig', [
+        'products' => $products
+    ]);
+}
+
+    /**
+     * @Route("/show/{id}", name="show")
+     * @param $id
+     * @param GroupRepository $groupRepository
+     * @return Response
+     */
+
+    public function show($id, GroupRepository $groupRepository) {
+        $groups = $groupRepository->findBy(['category' => "$id"]);
 
         return $this->render('category/show.html.twig', [
-            'products' => $products
+            'groups' => $groups
         ]);
     }
 

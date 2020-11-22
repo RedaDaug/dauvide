@@ -19,6 +19,23 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
 
+    /**
+     * @param $id
+     * @return Product[] Returns an array of Product objects
+     */
+
+
+    public function getFirstProductImageName ($id){
+
+        $qb = $this->createQueryBuilder('p');
+        $qb->select('p.image_name')
+            ->where('p =:id')
+            ->setParameter('id', $id)
+        ;
+
+        return $qb->getQuery()->getResult();
+    }
+
     // /**
     //  * @return Product[] Returns an array of Product objects
     //  */

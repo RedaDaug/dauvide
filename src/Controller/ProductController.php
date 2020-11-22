@@ -143,4 +143,20 @@ class ProductController extends AbstractController
 
     }
 
+    /**
+     * @param $id
+     * @param ProductRepository $productRepository
+     * @return Response
+     */
+    public function displayImages($id, ProductRepository $productRepository)
+    {
+        $products = $productRepository->findBy(['mainProduct' => "$id"]);
+        $imageNames = $productRepository->getFirstProductImageName($id);
+
+        return $this->render('product/displayImages.html.twig', [
+            'products' => $products,
+            'imageNames' =>$imageNames
+        ]);
+    }
+
 }

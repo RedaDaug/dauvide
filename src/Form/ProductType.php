@@ -21,6 +21,7 @@ class ProductType extends AbstractType
               ])
             ->add('barcode')
             ->add('category')
+            ->add('mainProduct')
             ->add('save', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-success float-right'

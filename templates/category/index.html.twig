@@ -9,17 +9,17 @@
             <div class="row mt-5 mb-5">
                 {% for category in categories %}
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6 mt-2 mb-2">
-                        <a href="{{ path('category.show', {id: category.id}) }}" role="button" class="skalas" >
-                            <div class="bg-white category-card">
-                                <div class="category-card-inside">
-                                    <img src=" {{ asset('img/' ~ category.imageName) }}" alt="purskiklis" width="90%" >
-                                    <div class="category-name">{{ category.name}}</div>
-
-                                </div>
+                    <a href="{{ path('category.show', {id: category.id}) }}" role="button" class="skalas" >
+                        <div class="bg-white category-card">
+                            <div class="category-card-inside">
+                                <img src=" {{ asset('img/' ~ category.imageName) }}" alt="purskiklis" width="90%" >
+                                <div class="category-name">{{ category.name}}</div>
 
                             </div>
-                        </a>
-                    </div>
+
+                        </div>
+                    </a>
+                </div>
                 {% endfor %}
 
             </div>

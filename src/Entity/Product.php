@@ -43,6 +43,11 @@ class Product
      */
     private $category;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=MainProduct::class, inversedBy="product")
+     */
+    private $mainProduct;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -106,5 +111,22 @@ class Product
         $this->category = $category;
 
         return $this;
+    }
+
+    public function getMainProduct(): ?MainProduct
+    {
+        return $this->mainProduct;
+    }
+
+    public function setMainProduct(?MainProduct $mainProduct): self
+    {
+        $this->mainProduct = $mainProduct;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->image_name;
     }
 }

@@ -39,10 +39,16 @@ class Category
      */
     private $groups;
 
+    /**
+     * @ORM\OneToMany(targetEntity=MainProduct::class, mappedBy="category")
+     */
+    private $mainProducts;
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
         $this->groups = new ArrayCollection();
+        $this->mainProducts = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -133,6 +139,36 @@ class Category
             // set the owning side to null (unless already changed)
             if ($group->getCategory() === $this) {
                 $group->setCategory(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|MainProduct[]
+     */
+    public function getMainProducts(): Collection
+    {
+        return $this->mainProducts;
+    }
+
+    public function addMainProduct(MainProduct $mainProduct): self
+    {
+        if (!$this->mainProducts->contains($mainProduct)) {
+            $this->mainProducts[] = $mainProduct;
+            $mainProduct->setCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMainProduct(MainProduct $mainProduct): self
+    {
+        if ($this->mainProducts->removeElement($mainProduct)) {
+            // set the owning side to null (unless already changed)
+            if ($mainProduct->getCategory() === $this) {
+                $mainProduct->setCategory(null);
             }
         }
 

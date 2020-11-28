@@ -4,8 +4,28 @@ a{
 
 a:hover {
     text-decoration: none;
-    color: #ABDB25;
+    color: #154360;
 
+}
+
+.row {
+    width: 100%;
+}
+
+h3 {
+    color: #154360 !important;
+    text-align: left;
+    width: auto;
+    padding-bottom: 5px;
+}
+
+h3::after {
+    display: block;
+    content: " ";
+    height: 1px;
+    width: 150px;
+    margin-top: 5px;
+    background-color: #154360;
 }
 
 .mygas {
@@ -22,8 +42,9 @@ a:hover {
 }
 
 .mygas:hover{
-    background-color: #ABDB25;
-    color: #5d5d5d;
+    /*background-color: #ABDB25;*/
+    background-color: #145A32;
+    color: #154360;
     text-decoration: none;
 }
 
@@ -34,6 +55,8 @@ a:hover {
 .skalas:hover {
     transform: scale(1.1);
 }
+
+
 
 .svgas {
     width: 70px;
@@ -49,13 +72,18 @@ a:hover {
 }
 
 .greenas {
-    color: #ABDB25;
+    /*color: #ABDB25;*/
+    color: #145A32;
 }
 
 .greenbo {
-    border: 2px solid #ABDB25;
+    /*border: 2px solid #ABDB25;*/
+    border: 2px solid #145A32;
 }
 
+.navbar {
+    background-color: #154360;
+}
 .nav-link {
     color: white !important;
 }
@@ -113,18 +141,47 @@ ul {
     padding: 0;
 }
 
+/*This code could be used to generate a filter from hex color https://codepen.io/sosuke/pen/Pjoqqp */
+
 .history {
-    filter: invert(72%) sepia(0%) saturate(0%) hue-rotate(157deg) brightness(86%) contrast(85%);
+    filter: invert(22%) sepia(23%) saturate(1535%) hue-rotate(160deg) brightness(92%) contrast(93%);
+    /*filter: invert(72%) sepia(0%) saturate(0%) hue-rotate(157deg) brightness(86%) contrast(85%);*/
 }
 
 .hero {
-    min-height: 400px;
-    max-width: 1200px;
-    background-image: url('img/blue-auto.png');
+    height: 400px;
+    width:auto;
+    background-image: url('img/winter2.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.hero-container {
+    height: 400px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-right: 250px;
+
+}
+
+.hero-btn {
+    background-color: #154360;
+    padding: 5px 10px;
+    min-width: 100px;
+    border: none;
+    color: #ffffff;
+}
+
+.hero-btn:hover {
+    background-color: #ABDB25;
+    color: #154360;
+}
+.history-bg {
+    background-image: url("img/17545.jpg");
+    max-width: 400px;
+    min-height: 500px;
+
 }
 
 .hero button {
@@ -149,6 +206,7 @@ ul {
 
 .category-card:hover {
     border: 2px solid #ABDB25;
+    /*border: 2px solid #154360;*/
 }
 
 .button-action {

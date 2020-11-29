@@ -28,25 +28,6 @@ h3::after {
     background-color: #154360;
 }
 
-.mygas {
-    background-color: #999999;
-    color: #FFF;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-}
-
-.mygas:hover{
-    /*background-color: #ABDB25;*/
-    background-color: #145A32;
-    color: #154360;
-    text-decoration: none;
-}
 
 .skalas {
     transform: scale(1);
@@ -56,30 +37,6 @@ h3::after {
     transform: scale(1.1);
 }
 
-
-
-.svgas {
-    width: 70px;
-    height: 70px;
-}
-.svgas:hover {
-    fill: red;
-}
-
-.main_color {
-    background-color: #999999;
-    color: #ABDB25;
-}
-
-.greenas {
-    /*color: #ABDB25;*/
-    color: #145A32;
-}
-
-.greenbo {
-    /*border: 2px solid #ABDB25;*/
-    border: 2px solid #145A32;
-}
 
 .navbar {
     background-color: #154360;
@@ -192,15 +149,12 @@ ul {
     text-align: left;
 }
 
-/*.category-card-inside {*/
-/*    position: absolute;*/
-/*    top: -100px;*/
-/*}*/
 
 .category-card {
     padding: 20px;
     margin: 10px 10px;
     height: 250px;
+    border: 2px solid #ffffff;
     /*position: relative;*/
 }
 
@@ -208,6 +162,20 @@ ul {
     border: 2px solid #ABDB25;
     /*border: 2px solid #154360;*/
 }
+
+.product-card {
+    padding: 20px;
+    margin: 5px 5px;
+    border: 2px solid #ffffff;
+
+}
+
+.product-card:hover {
+    border: 2px solid #ABDB25;
+    /*border: 2px solid #154360;*/
+}
+
+
 
 .button-action {
     background-color: #ABDB25;

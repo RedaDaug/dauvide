@@ -1,24 +1,33 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <script type="text/javascript">
+
+        function showImage(imgPath) {
+            var curImage = document.getElementById('currentImg');
+            curImage.src = imgPath;
+        }
+    </script>
     <section id="produktai-kategorijoje">
         <div class="container mt-5 pt-5">
-                        <h3>{% for product in products|slice (0,1) %}{{ product.mainProduct.category.id }}{% endfor %} </h3>
-{#            <p> {{ product.mainProduct }}</p>#}
-
-
-            <div class="row mt-3 mb-5">
-                {% for product in products %}
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-2 mb-2">
-                        <div role="button" class="btn mb-3">
-                            {#                            <a class="btn mt-5 mb-3" href="{{ path('product.show', {id: product.id}) }}" role="button">#}
-                            <img src="{{ asset('img/' ~ product.imageName) }}" alt="what" width="100%">
-                            {#                            </a>#}
-                            <div>{{ product.name }}</div>
-                            <div>{{ product.category.id }}</div>
-                        </div>
+            <div class="col-lg-6">
+                {% for product in products|slice (0,1) %}
+                    <h3>{{ product.mainProduct.category }} </h3>
+                    <p> {{ product.mainProduct }}</p>
+                    <div>
+                        <img src="{{ asset('img/' ~ product.imageName) }}" id="currentImg" alt="Teacup" title="Blue Teacup" width="100%">
                     </div>
                 {% endfor %}
+            </div>
+            <div class="col-lg-6">
+                <ul class="colorpicker pl-0 row">
+
+                    {% for product in products %}
+                        <li class="col-2 col-md-3"><img src="{{ asset('img/' ~ product.imageName) }}" width="50%"
+                                                        onclick="showImage('{{ asset('img/' ~ product.imageName) }}')" data-pin-nopin="true"></li>
+
+                    {% endfor %}
+                </ul>
 
             </div>
 

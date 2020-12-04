@@ -2,9 +2,14 @@
 
 namespace App\Controller;
 
+use App\Entity\MainProduct;
+use App\Form\MainProductType;
+use App\Form\ProductType;
 use App\Repository\MainProductRepository;
 use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -56,4 +61,122 @@ class MainProductController extends AbstractController
             'mainProducts' => $mainProducts
         ]);
     }
+
+    /**
+     * @Route("/create", name="create")
+     * @param Request $request
+     * @return Response
+     */
+
+    public function create(Request $request){
+        $mainProduct = new MainProduct();
+
+        $form = $this->createForm(MainProductType::class, $mainProduct);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $file = $form->get('imageName')->getData();
+            if ($file) {
+                /** @var UploadedFile $filename */
+                $filename = md5(uniqid()) . '.' . $file->guessClientExtension();
+
+                $file->move(
+                    $this->getParameter('uploads_dir'),
+                    $filename
+                );
+
+                $mainProduct->setImageName($filename);
+
+            }
+            $em->persist($mainProduct);
+            $em->flush();
+            $this->addFlash('success', "The main product was added");
+
+            return $this->redirect($this->generateUrl('admin.index'));
+        }
+
+        return $this->render('main_product/create.html.twig', [
+            'form' => $form->createView()
+        ]);
+
+    }
+
+//    /**
+//     * @Route("/show/{id}", name="show")
+//     * @param $id
+//     * @return Response
+//     */
+//
+//    public function show($id) {
+//
+//        return $this->render('main_product/show.html.twig', [
+//            'mainProducts' => $mainProducts
+//        ]);
+//    }
+
+    /**
+     * @Route("/delete/{id}", name="delete")
+     * @param $id
+     * @param MainProductRepository $mainProductRepository
+     * @return Response
+     */
+
+    public function delete($id, MainProductRepository $mainProductRepository){
+        $mainProduct = $mainProductRepository->find($id);
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($mainProduct);
+        $em->flush();
+
+        $this->addFlash('success', "The main product was deleted");
+        return $this->redirect($this->generateUrl('admin.index'));
+
+    }
+
+    /**
+     * @Route("/edit/{id}", name="edit")
+     * @param Request $request
+     * @param $id
+     * @param MainProductRepository $mainProductRepository
+     * @return Response
+     */
+
+    public function edit(Request $request, $id, MainProductRepository $mainProductRepository){
+
+        $mainProduct = $mainProductRepository->find($id);
+
+        $form = $this->createForm(MainProductType::class, $mainProduct);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $file = $form->get('imageName')->getData();
+            if ($file) {
+                /** @var UploadedFile $filename */
+                $filename = md5(uniqid()) . '.' . $file->guessClientExtension();
+
+                $file->move(
+                    $this->getParameter('uploads_dir'),
+                    $filename
+                );
+
+                $mainProduct->setImageName($filename);
+
+            }
+            $em->flush();
+            $this->addFlash('success', "The main product was updated");
+
+            return $this->redirect($this->generateUrl('admin.index'));
+        }
+
+
+        return $this->render('main_product/edit.html.twig', [
+            'form' => $form->createView(),
+            'mainProduct' => $mainProduct
+        ]);
+
+    }
+
+
 }

@@ -31,6 +31,30 @@
                     <th>Produkto pavadinimas</th>
                     <th></th>
                 </tr>
+                {% for mainProduct in mainProducts %}
+                    <tr>
+                        <td><img src="{{ asset('img/' ~ mainProduct.imageName) }}" id="currentImg" alt="Teacup"
+                                 title="Blue Teacup" width="40px"></td>
+                        <td>{{ mainProduct.name }}</td>
+                        <td><a href="{{ path('mainproduct.edit', {id: mainProduct.id}) }}">Edit</a> | <a
+                                    onclick="return confirm('Ar tikrai norite istrinti?')"
+                                    href="{{ path('mainproduct.delete', {id: mainProduct.id}) }}">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+            <div class="mb-5">
+                <ion-icon name="add-circle"></ion-icon>
+                <a href="{{ path('mainproduct.create') }}">Sukurti naują produktą</a>
+            </div>
+
+            <table class="table">
+                <tr>
+                    <th></th>
+                    <th>Produkto pavadinimas</th>
+                    <th></th>
+                </tr>
                 {% for product in products %}
                     <tr>
                         <td><img src="{{ asset('img/' ~ product.imageName) }}" id="currentImg" alt="Teacup"

@@ -1,188 +1,135 @@
-a{
-    color: #5d5d5d;
-}
+* {
+  margin: 0; }
 
-a:hover {
+a {
+  color: #5d5d5d; }
+  a:hover {
     text-decoration: none;
-    color: #154360;
-
-}
+    color: #154360; }
 
 .row {
-    width: 100%;
-}
+  width: 100%; }
 
 h3 {
-    color: #154360 !important;
-    text-align: left;
-    width: auto;
-    padding-bottom: 5px;
-}
-
-h3::after {
+  color: #154360 !important;
+  text-align: left;
+  width: auto;
+  padding-bottom: 5px; }
+  h3::after {
     display: block;
     content: " ";
     height: 1px;
     width: 150px;
     margin-top: 5px;
-    background-color: #154360;
-}
-
+    background-color: #154360; }
 
 .skalas {
-    transform: scale(1);
-}
-
-.skalas:hover {
-    transform: scale(1.1);
-}
-
+  transform: scale(1); }
+  .skalas:hover {
+    transform: scale(1.1); }
 
 .navbar {
-    background-color: #154360;
-}
+  background-color: #154360; }
+
 .nav-link {
-    color: white !important;
-}
+  color: white !important; }
 
 .nav-link:hover {
-    color: #ABDB25 !important;
-}
+  color: #ABDB25 !important; }
 
 .hover_title {
-    display: none;
-    position: absolute;
-    text-align: center;
-    padding-bottom: 10px;
-    height: 100%;
-}
+  display: none;
+  position: absolute;
+  text-align: center;
+  padding-bottom: 10px;
+  height: 100%; }
 
 ion-icon {
-    color: #ABDB25;
-}
+  color: #ABDB25; }
 
 .img_hov {
-    position: absolute;
-}
+  position: absolute; }
 
-.img_hov:hover + .hover_title{
-    background: rgba(0, 0, 0, 0.3);
-    display: flex;
-}
+.img_hov:hover + .hover_title {
+  background: rgba(0, 0, 0, 0.3);
+  display: flex; }
 
 .colorpicker {
-    list-style-type:none;
-}
+  list-style-type: none; }
+  .colorpicker::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .colorpicker li {
+    float: left;
+    list-style-type: none;
+    text-align: center;
+    padding: 0; }
+    .colorpicker li img {
+      width: 100px;
+      height: auto;
+      cursor: pointer; }
 
 #text {
-    display: none;
-}
+  display: none; }
 
-.colorpicker li {
-    float: left;
-    list-style-type:none;
-    text-align: center;
-}
-
-.colorpicker li img {
-    width: 100px;
-    height: auto;
-    cursor: pointer;
-}
 ul {
-    list-style-type: none;
-}
-
-.colorpicker li {
-    float: left;
-    padding: 0;
-}
+  list-style-type: none; }
 
 /*This code could be used to generate a filter from hex color https://codepen.io/sosuke/pen/Pjoqqp */
-
 .history {
-    filter: invert(22%) sepia(23%) saturate(1535%) hue-rotate(160deg) brightness(92%) contrast(93%);
-    /*filter: invert(72%) sepia(0%) saturate(0%) hue-rotate(157deg) brightness(86%) contrast(85%);*/
-}
+  filter: invert(22%) sepia(23%) saturate(1535%) hue-rotate(160deg) brightness(92%) contrast(93%); }
 
 .hero {
-    height: 400px;
-    width:auto;
-    background-image: url('img/winter2.png');
-    background-position: bottom center;
-    background-repeat: no-repeat;
-}
+  height: 400px;
+  width: auto;
+  background-image: url("img/winter2.png");
+  background-position: bottom center;
+  background-repeat: no-repeat; }
 
 .hero-container {
-    height: 400px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 250px;
-
-}
+  height: 400px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 250px; }
 
 .hero-btn {
-    background-color: #154360;
-    padding: 5px 10px;
-    min-width: 100px;
-    border: none;
-    color: #ffffff;
-}
-
-.hero-btn:hover {
+  background-color: #154360;
+  padding: 5px 10px;
+  min-width: 100px;
+  border: none;
+  color: #ffffff; }
+  .hero-btn:hover {
     background-color: #ABDB25;
-    color: #154360;
-}
-.history-bg {
-    background-image: url("img/17545.jpg");
-    max-width: 400px;
-    min-height: 500px;
+    color: #154360; }
 
-}
+.history-bg {
+  background-image: url("img/17545.jpg");
+  max-width: 400px;
+  min-height: 500px; }
 
 .hero button {
-    padding-right: 10px;
-}
+  padding-right: 10px; }
 
 .category-name {
-    text-align: left;
-}
-
+  text-align: left; }
 
 .category-card {
-    padding: 20px;
-    margin: 10px 10px;
-    height: 250px;
-    border: 2px solid #ffffff;
-    /*position: relative;*/
-}
+  padding: 20px;
+  margin: 10px 10px;
+  height: 250px;
+  border: 2px solid #ffffff;
+  /*position: relative;*/ }
+  .category-card:hover {
+    border: 2px solid #ABDB25; }
 
-.category-card:hover {
-    border: 2px solid #ABDB25;
-    /*border: 2px solid #154360;*/
-}
-
-.product-card {
-    padding: 20px;
-    margin: 5px 5px;
-    border: 2px solid #ffffff;
-
-}
-
-.product-card:hover {
-    border: 2px solid #ABDB25;
-    /*border: 2px solid #154360;*/
-}
-
-
+.other-product-card {
+  padding: 5px;
+  margin: 5px 5px;
+  border: 2px solid #ffffff; }
+  .other-product-card:hover {
+    border: 2px solid #ABDB25; }
 
 .button-action {
-    background-color: #ABDB25;
-}
-
-
-
-
-
-
+  background-color: #ABDB25; }

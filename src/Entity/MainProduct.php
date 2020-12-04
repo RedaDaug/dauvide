@@ -44,6 +44,11 @@ class MainProduct
      */
     private $imageName;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Season::class, inversedBy="mainProducts")
+     */
+    private $season;
+
     public function __construct()
     {
         $this->product = new ArrayCollection();
@@ -133,6 +138,18 @@ class MainProduct
     public function setImageName(string $imageName): self
     {
         $this->imageName = $imageName;
+
+        return $this;
+    }
+
+    public function getSeason(): ?Season
+    {
+        return $this->season;
+    }
+
+    public function setSeason(?Season $season): self
+    {
+        $this->season = $season;
 
         return $this;
     }

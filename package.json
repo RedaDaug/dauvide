@@ -1,0 +1,18 @@
+{
+  "name": "dauvide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss public/style.css -w"
+  },
+  "author": "",
+  "license": "ISC"
+}

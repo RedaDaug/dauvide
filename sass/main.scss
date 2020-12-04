@@ -1,0 +1,195 @@
+$color-primary: #154360;
+$color-secondary: #ABDB25;
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+* {
+  margin: 0;
+}
+
+a{
+  color: #5d5d5d;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-primary;
+  }
+}
+
+.row {
+  width: 100%;
+}
+
+h3 {
+  color: $color-primary !important;
+  text-align: left;
+  width: auto;
+  padding-bottom: 5px;
+
+  &::after {
+    display: block;
+    content: " ";
+    height: 1px;
+    width: 150px;
+    margin-top: 5px;
+    background-color: $color-primary;
+  }
+}
+
+.skalas {
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+.navbar {
+  background-color: $color-primary;
+}
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: $color-secondary !important;
+}
+
+.hover_title {
+  display: none;
+  position: absolute;
+  text-align: center;
+  padding-bottom: 10px;
+  height: 100%;
+}
+
+ion-icon {
+  color: $color-secondary;
+}
+
+.img_hov {
+  position: absolute;
+}
+
+.img_hov:hover + .hover_title{
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+.colorpicker {
+  list-style-type:none;
+  @include clearfix;
+
+  li {
+    float: left;
+    list-style-type:none;
+    text-align: center;
+    padding: 0;
+
+    img {
+      width: 100px;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+}
+
+#text {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+/*This code could be used to generate a filter from hex color https://codepen.io/sosuke/pen/Pjoqqp */
+
+.history {
+  filter: invert(22%) sepia(23%) saturate(1535%) hue-rotate(160deg) brightness(92%) contrast(93%);
+}
+
+.hero {
+  height: 400px;
+  width:auto;
+  background-image: url('img/winter2.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.hero-container {
+  height: 400px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 250px;
+
+}
+
+.hero-btn {
+  background-color: $color-primary;
+  padding: 5px 10px;
+  min-width: 100px;
+  border: none;
+  color: #ffffff;
+
+  &:hover {
+    background-color: $color-secondary;
+    color: $color-primary;
+  }
+}
+
+
+.history-bg {
+  background-image: url("img/17545.jpg");
+  max-width: 400px;
+  min-height: 500px;
+
+}
+
+.hero button {
+  padding-right: 10px;
+}
+
+.category-name {
+  text-align: left;
+}
+
+.category-card {
+  padding: 20px;
+  margin: 10px 10px;
+  height: 250px;
+  border: 2px solid #ffffff;
+  /*position: relative;*/
+  &:hover {
+    border: 2px solid $color-secondary;
+  }
+}
+
+.other-product-card {
+  padding: 5px;
+  margin: 5px 5px;
+  border: 2px solid #ffffff;
+
+  &:hover {
+    border: 2px solid $color-secondary;
+  }
+}
+
+
+.button-action {
+  background-color: $color-secondary;
+}
+
+
+
+
+
+

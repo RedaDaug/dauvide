@@ -36,6 +36,24 @@ class ProductRepository extends ServiceEntityRepository
         return $qb->getQuery()->getResult();
     }
 
+
+    /**
+     * @param $id
+     * @return Product[] Returns an array of Product objects
+     */
+
+
+    public function getProductBySeason($id){
+
+        $qb = $this->createQueryBuilder('p');
+        $qb->select('p.name')
+            ->where('p =:season_id')
+            ->setParameter('id', $id)
+        ;
+
+        return $qb->getQuery()->getResult();
+    }
+
     // /**
     //  * @return Product[] Returns an array of Product objects
     //  */

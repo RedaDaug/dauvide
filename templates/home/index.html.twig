@@ -10,42 +10,12 @@
             </div>
         </div>
     </div>
-    <section class="mt-5">
-        <div class="container">
-            <h3>Sezono prekės - TOP 10</h3>
-            <p>Pasiruošk žiemai</p>
+    <section>
+            {{ render(controller(
+                'App\\Controller\\SeasonController::listWinterProducts')) }}
 
-            <div class="row">
-                <div class="product-card col-lg-2 col-md-3 col-sm-6 col-6 text-center mt-2 mb-2">
-                    <div>
-                        <img src="{{ asset('img/11.png') }}" alt="Pradzia" class="w-75 pb-2">
-                        <p>Antifrizas -35</p>
-                    </div>
-                </div>
-                <div class="product-card col-lg-2 col-md-3 col-sm-6 col-6 text-center mt-2 mb-2">
-                    <div>
-                        <img src="{{ asset('img/grandiklis-paprastas.png') }}" alt="Pradzia" class="w-75 pb-2">
-                    </div>
-                </div>
-                <div class="product-card col-lg-2 col-md-3 col-sm-6 col-6 text-center mt-2 mb-2">
-                    <div>
-                        <img src="{{ asset('img/grandiklis.png') }}" alt="Pradzia" class="w-75 pb-2">
-                    </div>
-                </div>
-                <div class="product-card col-lg-2 col-md-3 col-sm-6 col-6 text-center mt-2 mb-2">
-                    <div>
-                        <img src="{{ asset('img/uzvedimo-laidai.png') }}" alt="Pradzia" class="w-75 pb-2">
-                    </div>
-                </div>
-                <div class="product-card col-lg-2 col-md-3 col-sm-6 col-6 text-center mt-2 mb-2">
-                    <div>
-                        <img src="{{ asset('img/atitirpintojas.png') }}" alt="Pradzia" class="w-75 pb-2">
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </section>
+
     <section>
         {{ render(controller(
             'App\\Controller\\CategoryController::index')) }}

@@ -34,10 +34,6 @@ class Category
      */
     private $products;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Group::class, mappedBy="Category", orphanRemoval=true)
-     */
-    private $groups;
 
     /**
      * @ORM\OneToMany(targetEntity=MainProduct::class, mappedBy="category")
@@ -113,36 +109,6 @@ class Category
     public function __toString()
     {
         return $this->name;
-    }
-
-    /**
-     * @return Collection|Group[]
-     */
-    public function getGroups(): Collection
-    {
-        return $this->groups;
-    }
-
-    public function addGroup(Group $group): self
-    {
-        if (!$this->groups->contains($group)) {
-            $this->groups[] = $group;
-            $group->setCategory($this);
-        }
-
-        return $this;
-    }
-
-    public function removeGroup(Group $group): self
-    {
-        if ($this->groups->removeElement($group)) {
-            // set the owning side to null (unless already changed)
-            if ($group->getCategory() === $this) {
-                $group->setCategory(null);
-            }
-        }
-
-        return $this;
     }
 
     /**

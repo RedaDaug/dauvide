@@ -5,8 +5,10 @@
             <div class="col-lg-3 col-md-4 col-sm-6 col-6 mt-2 mb-2">
                 <div class="bg-white category-card">
                     <div class="category-card-inside">
+                        <a href="{{ path('mainproduct.show', {id: mainProduct.id}) }}">
                         <img src=" {{ asset('img/' ~ mainProduct.imageName) }}" alt="{{ mainProduct.name}}" width="100%" >
                         <div class="category-name">{{ mainProduct.name}}</div>
+                        </a>
                     </div>
 
                 </div>

@@ -48,6 +48,11 @@ class Product
      */
     private $mainProduct;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=AromaList::class, inversedBy="products")
+     */
+    private $Aroma;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -128,5 +133,17 @@ class Product
     public function __toString()
     {
         return $this->image_name;
+    }
+
+    public function getAroma(): ?AromaList
+    {
+        return $this->Aroma;
+    }
+
+    public function setAroma(?AromaList $Aroma): self
+    {
+        $this->Aroma = $Aroma;
+
+        return $this;
     }
 }

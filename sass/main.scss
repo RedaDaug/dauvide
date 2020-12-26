@@ -11,6 +11,7 @@ $color-secondary: #ABDB25;
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 a{
@@ -24,6 +25,10 @@ a{
 
 .row {
   width: 100%;
+}
+
+h2 {
+  color: $color-secondary !important;
 }
 
 h3 {
@@ -40,6 +45,10 @@ h3 {
     margin-top: 5px;
     background-color: $color-primary;
   }
+}
+
+.container {
+  max-width: 1200px;
 }
 
 .skalas {

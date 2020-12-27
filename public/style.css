@@ -12,7 +12,7 @@ a {
   width: 100%; }
 
 h2 {
-  color: #ABDB25 !important; }
+  color: #41d6c3 !important; }
 
 h3 {
   color: #154360 !important;
@@ -30,6 +30,18 @@ h3 {
 .container {
   max-width: 1200px; }
 
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: white; }
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 16px; }
+    ul.breadcrumb li + li:before {
+      padding: 8px;
+      color: black;
+      content: "/\00a0"; }
+
 .skalas {
   transform: scale(1); }
   .skalas:hover {
@@ -42,7 +54,7 @@ h3 {
   color: white !important; }
 
 .nav-link:hover {
-  color: #ABDB25 !important; }
+  color: #41d6c3 !important; }
 
 .hover_title {
   display: none;
@@ -52,7 +64,7 @@ h3 {
   height: 100%; }
 
 ion-icon {
-  color: #ABDB25; }
+  color: #41d6c3; }
 
 .img_hov {
   position: absolute; }
@@ -108,7 +120,7 @@ ul {
   border: none;
   color: #ffffff; }
   .hero-btn:hover {
-    background-color: #ABDB25;
+    background-color: #41d6c3;
     color: #154360; }
 
 .history-bg {
@@ -129,14 +141,14 @@ ul {
   border: 2px solid #ffffff;
   /*position: relative;*/ }
   .category-card:hover {
-    border: 2px solid #ABDB25; }
+    border: 2px solid #41d6c3; }
 
 .other-product-card {
   padding: 5px;
   margin: 5px 5px;
   border: 2px solid #ffffff; }
   .other-product-card:hover {
-    border: 2px solid #ABDB25; }
+    border: 2px solid #41d6c3; }
 
 .button-action {
-  background-color: #ABDB25; }
+  background-color: #41d6c3; }

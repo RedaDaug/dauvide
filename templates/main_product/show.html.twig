@@ -8,12 +8,20 @@
             curImage.src = imgPath;
         }
     </script>
+    <section>
+        <div class="container mt-5">
+            {% for product in products|slice (0,1) %}
+                <ul class="breadcrumb">
+                    <li><a href="{{ path('home') }}">Pradžia</a></li>
+                    <li><a href="{{ path('category.show', {id: product.mainProduct.category.id}) }}">{{ product.mainProduct.category }}</a></li>
+                    <li>{{ product.mainProduct }}</li>
+                </ul>
+            {% endfor %}
+        </div>
+
+    </section>
     <section id="produktai-kategorijoje">
         <div class="container mt-5 pt-5">
-            {% for product in products|slice (0,1) %}
-                <h3>{{ product.mainProduct.category }} </h3>
-            {% endfor %}
-
             <div class="row">
                 <div class="col-lg-6">
                     {% for product in products|slice (0,1) %}
@@ -47,6 +55,7 @@
         </div>
 
     </section>
+
     <section>
         {% for product in products|slice (0,1) %}
         {{ render(controller(

@@ -1,5 +1,7 @@
 $color-primary: #154360;
-$color-secondary: #ABDB25;
+$color-secondary: #41d6c3;
+$color-sec: #5596e6;
+$color-ter: #41d6c3;
 
 @mixin clearfix {
   &::after {
@@ -49,6 +51,23 @@ h3 {
 
 .container {
   max-width: 1200px;
+}
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: white;
+
+  li {
+    display: inline;
+    font-size: 16px;
+
+    &+li:before {
+      padding: 8px;
+      color: black;
+      content: "/\00a0";
+    }
+  }
 }
 
 .skalas {

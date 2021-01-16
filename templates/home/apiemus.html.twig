@@ -2,45 +2,35 @@
 
 {% block body %}
     <section id="apie-mus" style="margin-top: 50px" class="mt-5 pt-5">
-        <div class="container text-center">
-            <h2>Apie mus</h2>
+        <div class="container">
+            <h3>Apie mus</h3>
+            <p>Jau daugiau nei 20 metų su Jumis!</p>
             <div class="row my-5">
-                <div class="col-4 history-bg">
-
+                <div class="col-lg-3 col-md-6">
+                    <img src="{{ asset('img/start.svg') }}" alt="Pradzia" class="w-25 pb-2 history">
+                    <p>UAB „Dauvidės prekyba“ įkurta 1998 metų gruodžio 10 dieną.
+                    </p>
                 </div>
-                <div class="col-8">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 card5">
-                            <div class="col-lg-10">
-                                <img src="{{ asset('img/start.svg') }}" alt="Pradzia" class="w-25 pb-2 history">
-                                <p>UAB „Dauvidės prekyba“ įkurta 1998 metų gruodžio 10 dieną.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 ">
-                            <img src="{{ asset('img/mission.svg') }}" alt="Veikla" class="w-25 pb-2 history">
-                            <p>Pagrindinė įmonės veikla – didmeninė prekyba
-                                automobilių eksploatacinėmis medžiagomis.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 col-md-6 ">
-                            <img src="{{ asset('img/product.svg') }}" alt="Veikla" class="w-25 pb-2 history">
-                            <p>Nuo veiklos pradžios didelis dėmesys skiriamas gaminamos ir
-                                parduodamos produkcijos kokybei.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 col-md-6 ">
-                            <img src="{{ asset('img/truck.svg') }}" alt="Veikla" class="w-25 pb-2 history">
-                            <p>Pristatymo terminai optimalūs.</p>
-                        </div>
-
-                    </div>
-
-
+                <div class="col-lg-3 col-md-6 ">
+                    <img src="{{ asset('img/mission.svg') }}" alt="Veikla" class="w-25 pb-2 history">
+                    <p>Pagrindinė įmonės veikla – didmeninė prekyba
+                        automobilių eksploatacinėmis medžiagomis.
+                    </p>
                 </div>
-
+                <div class="col-lg-3 col-md-6 ">
+                    <img src="{{ asset('img/product.svg') }}" alt="Veikla" class="w-25 pb-2 history">
+                    <p>Nuo veiklos pradžios didelis dėmesys skiriamas gaminamos ir
+                        parduodamos produkcijos kokybei.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 ">
+                    <img src="{{ asset('img/truck.svg') }}" alt="Veikla" class="w-25 pb-2 history">
+                    <p>Pristatymo terminai optimalūs.</p>
+                </div>
 
             </div>
         </div>
+
     </section>
     <section id="musu-produktai" class="mt-5 bg-light">
         <div class="container text-center mb-5 pt-5">

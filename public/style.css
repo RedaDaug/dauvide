@@ -142,6 +142,14 @@ ul {
   /*position: relative;*/ }
   .category-card:hover {
     border: 2px solid #41d6c3; }
+  @media (max-width: 420px) {
+    .category-card {
+      padding: 5px;
+      margin: 5px 5px;
+      height: 190px; } }
+  @media (min-width: 421px) {
+    .category-card {
+      height: 200px; } }
 
 .other-product-card {
   padding: 5px;

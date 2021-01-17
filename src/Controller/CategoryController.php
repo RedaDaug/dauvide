@@ -60,7 +60,7 @@ class CategoryController extends AbstractController
     public function findAllProductsInCategory($id, MainProductRepository $mainProductRepository) {
 
         $mainProducts = $mainProductRepository->findBy(['category' => "$id"], ['name' => 'ASC']);
-        return $this->render('main_product/index.html.twig', [
+        return $this->render('category/show.html.twig', [
             'mainProducts' => $mainProducts
         ]);
 }

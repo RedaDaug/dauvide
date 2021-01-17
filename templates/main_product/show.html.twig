@@ -40,14 +40,14 @@
                     {% for product in products|slice (0,1) %}
                         <h2 class="title"> {{ product.mainProduct }}</h2>
                         <a href="{{ path('category.show', {id: product.mainProduct.category.id}) }}">{{ product.mainProduct.category }}</a>
-                        <p>{{ product.mainProduct.description }} </p>
+                        <div class="description">{{ product.mainProduct.description }} </div>
                     {% endfor %}
 
-                    {% for product in products %}
-                        <li>{{ product.aroma }}</li>
-
-                    {% endfor %}
-
+                    <ul style="list-style-type:none">
+                        {% for product in products %}
+                            <li>{{ product.aroma }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
 
             </div>

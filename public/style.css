@@ -166,5 +166,8 @@ ul {
   .partner-card:hover {
     border: 2px solid #41d6c3; }
 
+.description {
+  margin: 10px 0px; }
+
 .button-action {
   background-color: #41d6c3; }

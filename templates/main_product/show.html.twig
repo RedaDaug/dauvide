@@ -21,9 +21,9 @@
 
     </section>
     <section id="produktai-kategorijoje">
-        <div class="container mt-5 pt-5">
+        <div class="container mt-1 pt-5">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     {% for product in products|slice (0,1) %}
                         <div>
                             <img src="{{ asset('img/' ~ product.imageName) }}" id="currentImg" alt="Teacup" title="Blue Teacup" width="100%">
@@ -37,7 +37,7 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     {% for product in products|slice (0,1) %}
                         <h2 class="title"> {{ product.mainProduct }}</h2>
                         <a href="{{ path('category.show', {id: product.mainProduct.category.id}) }}">{{ product.mainProduct.category }}</a>

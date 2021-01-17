@@ -4,16 +4,16 @@
             <h3 class="col-12">Jus taip pat gali sudominti</h3>
 
             <div class="row mb-5 justify-content-center">
-                        {% for mainProduct in mainProducts| slice(0, 6) %}
-                                <div class="col-lg-2 col-md-3 col-4">
-                                    <a href="{{ path('mainproduct.show', {id: mainProduct.id}) }}" role="button">
-                                        <div class="bg-white other-product-card">
-                                            <img src="{{ asset('img/' ~ mainProduct.imageName) }}" alt="hand" width="70%">
-                                            <p>{{ mainProduct.name }}</p>
-                                        </div>
-                                    </a>
-                                </div>
-                        {% endfor %}
+                {% for mainProduct in mainProducts| slice(0, 6) %}
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <a href="{{ path('mainproduct.show', {id: mainProduct.id}) }}" role="button">
+                            <div class="bg-white other-product-card">
+                                <img src="{{ asset('img/' ~ mainProduct.imageName) }}" alt="hand" width="70%">
+                                <p>{{ mainProduct.name }}</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

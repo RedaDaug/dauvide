@@ -147,9 +147,6 @@ ul {
       padding: 5px;
       margin: 5px 5px;
       height: 190px; } }
-  @media (min-width: 421px) {
-    .category-card {
-      height: 200px; } }
 
 .other-product-card {
   padding: 5px;

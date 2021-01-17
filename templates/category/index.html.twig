@@ -3,23 +3,19 @@
 {% block title %}Hello CategoryController!{% endblock %}
 
 {% block body %}
-    <section id="produktai" class="bg-light" >
+    <section id="produktai" class="bg-light">
         <div class="container mt-5 pt-5">
             <h3>Produktų kategorijos</h3>
             <div class="row mt-5 mb-5">
                 {% for category in categories %}
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6 mt-2 mb-2 p-md-2 p-1">
-                    <a href="{{ path('category.show', {id: category.id}) }}" role="button" class="skalas" >
-                        <div class="bg-white category-card">
-                            <div>
-                                <img src=" {{ asset('img/' ~ category.imageName) }}" alt="purskiklis" width="90%" >
-                                <div class="category-name">{{ category.name}}</div>
-
+                        <a href="{{ path('category.show', {id: category.id}) }}" role="button" class="skalas">
+                            <div class="bg-white category-card">
+                                <img src=" {{ asset('img/' ~ category.imageName) }}" alt="purskiklis" width="90%">
+                                <div class="category-name">{{ category.name }}</div>
                             </div>
-
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
                 {% endfor %}
 
             </div>

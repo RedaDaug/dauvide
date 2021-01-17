@@ -223,12 +223,9 @@ ul {
   @include for-small-phone-only {
     padding: 5px;
     margin: 5px 5px;
-    height: 190px;
+    min-height: 190px;
   }
 
-  @include for-phone-only {
-    height: 200px;
-  }
 }
 
 .other-product-card {

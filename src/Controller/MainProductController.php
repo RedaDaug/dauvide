@@ -176,7 +176,7 @@ class MainProductController extends AbstractController
 
     public function findAllSeasonalProducts($id, MainProductRepository $mainProductRepository) {
 
-        $mainProducts = $mainProductRepository->findBy(['season' => "$id"]);
+        $mainProducts = $mainProductRepository->findBy(['season' => "$id"], ['name' => 'ASC']);
         return $this->render('main_product/season.html.twig', [
             'mainProducts' => $mainProducts
         ]);

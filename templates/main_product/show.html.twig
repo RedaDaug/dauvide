@@ -8,7 +8,7 @@
             curImage.src = imgPath;
         }
     </script>
-    <section>
+    <section id="breadcrumb">
         <div class="container mt-5">
             {% for product in products|slice (0,1) %}
                 <ul class="breadcrumb">
@@ -18,12 +18,11 @@
                 </ul>
             {% endfor %}
         </div>
-
     </section>
     <section id="produktai-kategorijoje">
-        <div class="container mt-1 pt-5">
+        <div class="container mt-1 pt-lg-5 pt-1">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 mb-1">
                     {% for product in products|slice (0,1) %}
                         <div>
                             <img src="{{ asset('img/' ~ product.imageName) }}" id="currentImg" alt="Teacup" title="Blue Teacup" width="100%">

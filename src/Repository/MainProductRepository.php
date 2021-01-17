@@ -19,6 +19,11 @@ class MainProductRepository extends ServiceEntityRepository
         parent::__construct($registry, MainProduct::class);
     }
 
+        public function findAll()
+    {
+        return $this->findBy(array(), array('category' => 'ASC'));
+    }
+
     // /**
     //  * @return MainProduct[] Returns an array of MainProduct objects
     //  */

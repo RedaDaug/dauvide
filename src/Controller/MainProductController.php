@@ -102,18 +102,6 @@ class MainProductController extends AbstractController
 
     }
 
-//    /**
-//     * @Route("/show/{id}", name="show")
-//     * @param $id
-//     * @return Response
-//     */
-//
-//    public function show($id) {
-//
-//        return $this->render('main_product/show.html.twig', [
-//            'mainProducts' => $mainProducts
-//        ]);
-//    }
 
     /**
      * @Route("/delete/{id}", name="delete")
@@ -176,6 +164,22 @@ class MainProductController extends AbstractController
             'mainProduct' => $mainProduct
         ]);
 
+    }
+
+
+    /**
+     * @Route("/season/{id}", name="season")
+     * @param $id
+     * @param MainProductRepository $mainProductRepository
+     * @return Response
+     */
+
+    public function findAllSeasonalProducts($id, MainProductRepository $mainProductRepository) {
+
+        $mainProducts = $mainProductRepository->findBy(['season' => "$id"]);
+        return $this->render('main_product/season.html.twig', [
+            'mainProducts' => $mainProducts
+        ]);
     }
 
 

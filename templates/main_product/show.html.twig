@@ -31,7 +31,7 @@
                     {% endfor %}
                     <ul class="colorpicker pl-0 row">
                         {% for product in products %}
-                            <li class="col-2 col-md-3"><img src="{{ asset('img/' ~ product.imageName) }}" width="50%"
+                            <li class="col-lg-2 col-md-3 col-sm-4 col-4"><img src="{{ asset('img/' ~ product.imageName) }}" width="50%"
                                                             onclick="showImage('{{ asset('img/' ~ product.imageName) }}')" data-pin-nopin="true"></li>
 
                         {% endfor %}

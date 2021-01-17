@@ -211,6 +211,17 @@ ul {
   }
 }
 
+.partner-card {
+  padding: 20px;
+  margin: 10px 10px;
+  min-height: 250px;
+  border: 2px solid #ffffff;
+  /*position: relative;*/
+  &:hover {
+    border: 2px solid $color-secondary;
+  }
+}
+
 
 .button-action {
   background-color: $color-secondary;

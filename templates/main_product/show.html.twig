@@ -14,7 +14,6 @@
                 <ul class="breadcrumb">
                     <li><a href="{{ path('home') }}">Pradžia</a></li>
                     <li><a href="{{ path('category.show', {id: product.mainProduct.category.id}) }}">{{ product.mainProduct.category }}</a></li>
-                    <li>{{ product.mainProduct }}</li>
                 </ul>
             {% endfor %}
         </div>

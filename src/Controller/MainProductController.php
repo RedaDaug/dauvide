@@ -55,7 +55,8 @@ class MainProductController extends AbstractController
     public function listMainProducts($id, MainProductRepository $mainProductRepository)
     {
 
-        $mainProducts = $mainProductRepository->findBy(['category' => "$id"], ['name' => 'ASC'], 6);
+        $mainProducts = $mainProductRepository->findBy(['category' => "$id"]);
+        shuffle($mainProducts);
 
         return $this->render('main_product/_other_products_in_category.html.twig', [
             'mainProducts' => $mainProducts

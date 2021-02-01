@@ -1,6 +1,5 @@
 $color-primary: #154360;
-$color-secondary: #41d6c3;
-$color-sec: #5596e6;
+$color-secondary: #156058;
 $color-ter: #41d6c3;
 
 @mixin clearfix {
@@ -111,7 +110,7 @@ ul.breadcrumb {
 }
 
 .nav-link:hover {
-  color: $color-secondary !important;
+  font-weight: bolder !important;
 }
 
 .hover_title {
@@ -194,7 +193,6 @@ ul {
 
   &:hover {
     background-color: $color-secondary;
-    color: $color-primary;
   }
 }
 

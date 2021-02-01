@@ -20,8 +20,8 @@ class ProductType extends AbstractType
               'mapped' => false
               ])
             ->add('barcode')
-            ->add('category')
             ->add('mainProduct')
+            ->add('Aroma')
             ->add('save', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-success float-right'

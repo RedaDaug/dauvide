@@ -37,11 +37,6 @@ class Product
      */
     private $barcode;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="products")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $category;
 
     /**
      * @ORM\ManyToOne(targetEntity=MainProduct::class, inversedBy="product")
@@ -102,18 +97,6 @@ class Product
     public function setBarcode(?int $barcode): self
     {
         $this->barcode = $barcode;
-
-        return $this;
-    }
-
-    public function getCategory(): ?category
-    {
-        return $this->category;
-    }
-
-    public function setCategory(?category $category): self
-    {
-        $this->category = $category;
 
         return $this;
     }

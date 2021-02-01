@@ -13,6 +13,9 @@ a {
 
 h2 {
   color: #156058 !important; }
+  @media (max-width: 420px) {
+    h2 {
+      font-size: 1.5rem; } }
 
 h3 {
   color: #154360 !important;

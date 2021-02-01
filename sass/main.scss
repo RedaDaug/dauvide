@@ -50,6 +50,11 @@ a{
 
 h2 {
   color: $color-secondary !important;
+
+  @include for-small-phone-only {
+    font-size: 1.5rem;
+  }
+
 }
 
 h3 {

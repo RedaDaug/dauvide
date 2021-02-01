@@ -65,5 +65,20 @@ class CategoryController extends AbstractController
         ]);
 }
 
+    /**
+     * @Route("/show/aroma", name="showAroma")
+     * @param $id
+     * @param MainProductRepository $mainProductRepository
+     * @return Response
+     */
+
+    public function findAllAromaProducts(MainProductRepository $mainProductRepository) {
+
+        $mainProducts = $mainProductRepository->findBy(['category' => "2"], ['name' => 'ASC']);
+        return $this->render('category/showaroma.html.twig', [
+            'mainProducts' => $mainProducts
+        ]);
+    }
+
 
 }

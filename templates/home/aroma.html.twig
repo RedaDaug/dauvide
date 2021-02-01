@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dauvidės prekyba{% endblock %}
+
+{% block body %}
+    <section id="breadcrumb">
+        <div class="container mt-5">
+                <ul class="breadcrumb">
+                    <li><a href="{{ path('home') }}">Pradžia</a></li>
+                    <li>Aroma oro gaivikliai</li>
+                </ul>
+        </div>
+    </section>
+    <section id="naujienos">
+        <div class="container mt-1 mb-5">
+                <div class="row">
+                    <div class="col-lg-4 col-xs-12 col-md-6">
+                        <img src=" {{ asset('img/naujiena.png') }}" alt="aroma nauji kvapai" width="100%" >
+                    </div>
+                    <div class="col-lg-8 col-xs-12 col-lg-6">
+                        <h2>Įsileiskite gamtos aromatus į savo interjerą!</h2>
+                        <p>Gamtos gaminių seriją sudaro gamtos įkvėptos kompozicijos. Visos pakuotės yra tinkamos perdirbti. </p>
+                        <div class="row mt-lg-5">
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <a href="{{ path('mainproduct.show', {id: 36}) }}" role="button">
+                                <img src=" {{ asset('img/nature1.png') }}" alt="aroma nauji kvapai" width="100%" >
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <a href="{{ path('mainproduct.show', {id: 35}) }}" role="button">
+                                    <img src=" {{ asset('img/nature2.png') }}" alt="aroma nauji kvapai" width="100%" >
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <a href="{{ path('mainproduct.show', {id: 37}) }}" role="button">
+                                    <img src=" {{ asset('img/nature3.png') }}" alt="aroma nauji kvapai" width="100%" >
+                                </a>
+
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <a href="{{ path('mainproduct.show', {id: 34}) }}" role="button">
+                                    <img src=" {{ asset('img/nature4.png') }}" alt="aroma nauji kvapai" width="100%" >
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section>
+            {{ render(controller(
+                'App\\Controller\\CategoryController::findAllAromaProducts')) }}
+    </section>
+
+
+{% endblock %}

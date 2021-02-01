@@ -37,4 +37,13 @@ class MainController extends AbstractController
         return $this->render('home/apiemus.html.twig');
     }
 
+    /**
+     * @Route("/aroma", name="aroma")
+     */
+
+    public function aroma()
+    {
+        return $this->render('home/aroma.html.twig');
+    }
+
 }

@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/mainproduct", name="mainproduct.")
+ * @Route("/produktai", name="mainproduct.")
  */
 class MainProductController extends AbstractController
 {

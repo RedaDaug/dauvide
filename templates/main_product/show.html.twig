@@ -24,13 +24,13 @@
                 <div class="col-md-6 mb-1">
                     {% for product in products|slice (0,1) %}
                         <div>
-                            <img src="{{ asset('img/' ~ product.imageName) }}" id="currentImg" alt="{{ product.mainProduct.name }}" title="Blue Teacup" width="100%">
+                            <img src="{{ asset('img/' ~ product.imageName) }}" id="currentImg" alt="{{ product.mainProduct.name }}" title="{{ product.mainProduct.name }}" width="100%">
                         </div>
                     {% endfor %}
                     <ul class="colorpicker pl-0 row">
                         {% for product in products %}
                             <li class="col-lg-2 col-md-3 col-sm-4 col-4">
-                                <img src="{{ asset('img/' ~ product.imageName) }}" width="50%" alt="{{ product.mainProduct.name }}"
+                                <img src="{{ asset('img/' ~ product.imageName) }}" width="50%" alt="{{ product.mainProduct.name }}" title="{{ product.name }}"
                                                             onclick="showImage('{{ asset('img/' ~ product.imageName) }}')" data-pin-nopin="true">
                             </li>
 

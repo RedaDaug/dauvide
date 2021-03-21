@@ -33,4 +33,19 @@ class SeasonController extends AbstractController
             'mainProducts' => $mainProducts
         ]);
     }
+
+    /**
+     * @param $id
+     * @param MainProductRepository $mainProductRepository
+     * @return Response
+     */
+    public function listSpringProducts(MainProductRepository $mainProductRepository)
+    {
+
+        $mainProducts = $mainProductRepository->findBy(['season' => "1"]);
+
+        return $this->render('home/_season_products.html.twig', [
+            'mainProducts' => $mainProducts
+        ]);
+    }
 }

@@ -27,7 +27,7 @@ class SeasonController extends AbstractController
     public function listWinterProducts(MainProductRepository $mainProductRepository)
     {
 
-        $mainProducts = $mainProductRepository->findBy(['season' => "4"]);
+        $mainProducts = $mainProductRepository->findBy(['season' => "4"], ['name' => 'ASC']);
 
         return $this->render('home/_season_products.html.twig', [
             'mainProducts' => $mainProducts

@@ -55,10 +55,6 @@ ul.breadcrumb {
       color: black;
       content: "/\00a0"; }
 
-.skalas {
-  transform: scale(1); }
-  .skalas:hover {
-    transform: scale(1.1); }
 
 .navbar {
   background-color: #154360; }

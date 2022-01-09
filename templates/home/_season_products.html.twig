@@ -1,11 +1,11 @@
-<div class="container pt-5">
+<div class="container pt-4">
         <h2>Žiemos prekės</h2>
-    <div class="row  mt-lg-5 mb-lg-5 mt-1 mb-1">
+    <div class="row  mt-lg-2 mb-lg-2 mt-1 mb-1">
         {% for mainProduct in mainProducts %}
             <div class="col-lg-3 col-md-4 col-sm-6 col-6 mt-1 mb-1">
-                <div role="button" class="btn mt-5 mb-3 skalas filterDiv">
-                    <a href="{{ path('mainproduct.show', {id: mainProduct.id}) }}">
-                        <div class="">
+                <div role="button" class="btn filterDiv">
+                    <a href="{{ path('mainproduct.show', {id: mainProduct.id}) }}" role="button" >
+                        <div class="bg-white category-card p-1">
                             <div><img src=" {{ asset('img/' ~ mainProduct.imageName) }}" alt="{{ mainProduct.name }}" width="80%">
                             </div>
                             <div>{{ mainProduct.name }}</div>

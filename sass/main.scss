@@ -48,7 +48,16 @@ a{
   width: 100%;
 }
 
-h2 {
+h1 {
+  font-size: 1.5rem;
+  color: $color-primary !important;
+
+  @include for-small-phone-only {
+    font-size: 1rem;
+  }
+}
+
+h3 {
   color: $color-secondary !important;
 
   @include for-small-phone-only {
@@ -57,7 +66,7 @@ h2 {
 
 }
 
-h1 {
+h2 {
   color: $color-primary !important;
   font-size: 1.75rem !important;
   text-align: left;

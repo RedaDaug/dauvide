@@ -4,7 +4,7 @@
 
     <section id="produktai-kategorijoje">
         <div class="container mt-5">
-            <h1>Visi produktai kategorijoje: {% for mainProduct in mainProducts|slice (0,1) %}{{ mainProduct.category }}{% endfor %} </h1>
+            <h2>Visi produktai kategorijoje: {% for mainProduct in mainProducts|slice (0,1) %}{{ mainProduct.category }}{% endfor %} </h2>
 
             <div class="row mt-3 mb-5">
                 {% for mainProduct in mainProducts %}

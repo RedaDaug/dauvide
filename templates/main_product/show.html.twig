@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-md-6">
                     {% for product in products|slice (0,1) %}
-                        <h2 class="title"> {{ product.mainProduct }}</h2>
+                        <h3 class="title"> {{ product.mainProduct }}</h3>
                         <a href="{{ path('category.show', {id: product.mainProduct.category.id}) }}">{{ product.mainProduct.category }}</a>
                         <div class="description">{{ product.mainProduct.description }} </div>
                     {% endfor %}

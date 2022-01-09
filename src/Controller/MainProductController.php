@@ -32,7 +32,7 @@ class MainProductController extends AbstractController
     }
 
     /**
-     * @Route("/show/{id}", name="show")
+     * @Route("/produktas-{id}", name="show")
      * @param $id
      * @param productRepository $productRepository
      * @return Response
@@ -169,7 +169,7 @@ class MainProductController extends AbstractController
 
 
     /**
-     * @Route("/season/{id}", name="season")
+     * @Route("/sezonas/{id}", name="season")
      * @param $id
      * @param MainProductRepository $mainProductRepository
      * @return Response

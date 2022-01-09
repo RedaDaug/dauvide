@@ -51,7 +51,7 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/show/{id}", name="show")
+     * @Route("-{id}", name="show")
      * @param $id
      * @param MainProductRepository $mainProductRepository
      * @return Response

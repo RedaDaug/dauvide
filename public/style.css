@@ -12,7 +12,7 @@ a {
   width: 100%; }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #154360 !important; }
   @media (max-width: 420px) {
     h1 {
@@ -109,14 +109,14 @@ ul {
   filter: invert(22%) sepia(23%) saturate(1535%) hue-rotate(160deg) brightness(92%) contrast(93%); }
 
 .hero {
-  height: 400px;
+  height: 300px;
   width: auto;
   background-image: url("img/winter2.jpg");
   background-position: bottom center;
   background-repeat: no-repeat; }
 
 .hero-container {
-  height: 400px;
+  height: 300px;
   display: flex;
   justify-content: flex-end;
   align-items: center;

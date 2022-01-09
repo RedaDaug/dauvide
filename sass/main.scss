@@ -49,7 +49,7 @@ a{
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: $color-primary !important;
 
   @include for-small-phone-only {
@@ -174,7 +174,7 @@ ul {
 }
 
 .hero {
-  height: 400px;
+  height: 300px;
   width:auto;
   background-image: url('img/winter2.jpg');
   background-position: bottom center;
@@ -182,7 +182,7 @@ ul {
 }
 
 .hero-container {
-  height: 400px;
+  height: 300px;
   display: flex;
   justify-content: flex-end;
   align-items: center;

@@ -6,7 +6,7 @@
             <div class="row mt-3 mb-5 justify-content-center">
                 {% for mainProduct in mainProducts|slice (0,6) %}
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <a href="{{ path('mainproduct.show', {id: mainProduct.id}) }}" role="button">
+                        <a href="{{ path('mainproduct.show', {id: mainProduct.id}) }}">
                             <div class="bg-white other-product-card">
                                 <img src="{{ asset('img/' ~ mainProduct.imageName) }}" alt="{{ mainProduct.name }}" width="70%">
                                 <p>{{ mainProduct.name }}</p>

@@ -19,7 +19,7 @@
             <div class="row mt-2 mb-5">
                 {% for mainProduct in mainProducts %}
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6 mt-1 mb-1">
-                        <div role="button" class="btn mt-5 mb-3 skalas filterDiv">
+                        <div role="button" class="btn mt-5 mb-3 filterDiv">
                             <a href="{{ path('mainproduct.show', {id: mainProduct.id}) }}">
                                 <div class="">
                                     <div><img src=" {{ asset('img/' ~ mainProduct.imageName) }}" alt="{{ mainProduct.name }}" style="width:80%;">

@@ -17,12 +17,13 @@ h2 {
     h2 {
       font-size: 1.5rem; } }
 
-h3 {
+h1 {
   color: #154360 !important;
+  font-size: 1.75rem !important;
   text-align: left;
   width: auto;
   padding-bottom: 5px; }
-  h3::after {
+  h1::after {
     display: block;
     content: " ";
     height: 1px;
@@ -107,8 +108,8 @@ ul {
 .hero {
   height: 400px;
   width: auto;
-  background-image: url("img/winter2.png");
-  background-position: top left;
+  background-image: url("img/header2.png");
+  background-position: bottom center;
   background-repeat: no-repeat; }
 
 .hero-container {

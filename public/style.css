@@ -18,12 +18,6 @@ h1 {
     h1 {
       font-size: 1rem; } }
 
-h3 {
-  color: #156058 !important; }
-  @media (max-width: 420px) {
-    h3 {
-      font-size: 1.5rem; } }
-
 h2 {
   color: #154360 !important;
   font-size: 1.75rem !important;
@@ -37,6 +31,12 @@ h2 {
     width: 150px;
     margin-top: 5px;
     background-color: #154360; }
+
+h3 {
+  color: #156058 !important; }
+  @media (max-width: 420px) {
+    h3 {
+      font-size: 1.5rem; } }
 
 .container {
   max-width: 1200px; }
@@ -54,7 +54,6 @@ ul.breadcrumb {
       padding: 8px;
       color: black;
       content: "/\00a0"; }
-
 
 .navbar {
   background-color: #154360; }
@@ -145,7 +144,7 @@ ul {
 .category-card {
   padding: 20px;
   margin: 10px 10px;
-  height: 250px;
+  min-height: 250px;
   border: 2px solid #ffffff;
   /*position: relative;*/ }
   .category-card:hover {

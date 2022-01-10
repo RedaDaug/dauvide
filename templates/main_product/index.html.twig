@@ -16,10 +16,10 @@
     <section id="produktai">
         <div class="container mt-1 text-center">
             <h2>Visi produktai</h2>
-            <div class="row mt-2 mb-5">
+            <div class="row  mt-lg-2 mb-lg-2 mt-1 mb-1">
                 {% for mainProduct in mainProducts %}
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-6 mt-1 mb-1">
-                        <div class="btn mt-5 mb-3 filterDiv">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="btn filterDiv p-1">
                             <a href="{{ path('mainproduct.show', {id: mainProduct.id}) }}">
                                 <div class="">
                                     <div><img src=" {{ asset('img/' ~ mainProduct.imageName) }}" alt="{{ mainProduct.name }}" style="width:80%;">

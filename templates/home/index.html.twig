@@ -12,9 +12,8 @@
         <div class="hero container">
             <div class="hero-container">
                 <div class="row">
-
-                    <a href="{{ path('mainproduct.season', {id: 4}) }}">
-                        <button class="hero-btn rounded">Pasiruošk žiemai</button> </a>
+                    <a href="{{ path('mainproduct.season', {id: 1}) }}">
+                        <button class="hero-btn rounded">Laikas praustis</button> </a>
                 </div>
             </div>
         </div>
@@ -38,7 +37,7 @@
 
     </section>-->
         {{ render(controller(
-            'App\\Controller\\SeasonController::listWinterProducts')) }}
+            'App\\Controller\\SeasonController::listSpringProducts')) }}
     <section>
         {{ render(controller(
             'App\\Controller\\CategoryController::index')) }}

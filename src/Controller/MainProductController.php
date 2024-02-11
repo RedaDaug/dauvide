@@ -63,6 +63,7 @@ class MainProductController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/create", name="create")
      * @param Request $request
@@ -182,6 +183,5 @@ class MainProductController extends AbstractController
             'mainProducts' => $mainProducts
         ]);
     }
-
 
 }

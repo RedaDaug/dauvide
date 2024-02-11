@@ -80,5 +80,17 @@ class CategoryController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/get-category-name/{categoryId}", name="get_category_name")
+     */
+    public function getCategoryName($categoryId)
+    {
+        // Replace this with your logic to fetch the category name based on the category ID.
+        $categoryName = $this->getDoctrine()->getRepository(Category::class)->find($categoryId)->getName();
+
+        // Return the category name as JSON (you can adjust the response type as needed).
+        return $this->json(['category_name' => $categoryName]);
+    }
+
 
 }
